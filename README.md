@@ -1,4 +1,4 @@
-# 🛌 Smart_Blind_HRV_module
+# 🛌 Smart_Blind_HRV
 
 Real-time Sleep Stage Classification with HRV from the MAX30102 Sensor on Raspberry Pi  
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
