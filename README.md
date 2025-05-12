@@ -19,12 +19,54 @@ It utilizes preprocessing, feature extraction, and deep learning (LSTM-based) cl
 
 ## 🔧 1. Raspberry Pi Setup
 
-### ✅ Enable I2C Interface
+---
+
+## 🔌 Driver Installation (for Raspberry Pi)
+
+To use the MAX30102 sensor with this project, please follow these setup steps:
+
+### ✅ 1. Enable I2C Interface
+
+Open the terminal and run:
+
 ```bash
 sudo raspi-config
-# → 5 Interfacing Options → P5 I2C → YES
-# → Reboot after enabling
 ```
+
+- Navigate to: `5 Interfacing Options`
+- Select: `P5 I2C` → Press Enter
+- Confirm with `YES` and reboot the Raspberry Pi
+
+---
+
+### ✅ 2. Install Required System Packages
+
+Make sure your Raspberry Pi is connected to the Internet, then run:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential python-dev python-smbus git
+```
+
+---
+
+### ✅ 3. Download the Blood Oxygen Driver Library
+
+Clone the official MAX30102 driver provided by DFRobot:
+
+```bash
+cd ~/Desktop/
+git clone https://github.com/DFRobot/DFRobot_BloodOxygen_S
+```
+
+After cloning, your Python scripts should import the driver from this location:
+```
+DFRobot_BloodOxygen_S/python/DFRobot_BloodOxygen_S.py
+```
+
+---
+
+> ⚠️ If you move the folder, make sure to update the `sys.path.append(...)` line in `max30102_reader.py` accordingly.
 
 ## 📦 2. Python Environment Setup
 
