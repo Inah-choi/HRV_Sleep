@@ -24,7 +24,8 @@ It utilizes preprocessing, feature extraction, and deep learning (LSTM-based) cl
 sudo raspi-config
 # → 5 Interfacing Options → P5 I2C → YES
 # → Reboot after enabling
-```markdown
+```
+
 ## 📦 2. Python Environment Setup
 
 ### Using Poetry (recommended)
