@@ -1,7 +1,6 @@
 # 🛌 Smart_Blind_HRV
 
 Real-time Sleep Stage Classification with HRV from the MAX30102 Sensor on Raspberry Pi  
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 This repository enables real-time classification of sleep stages using Heart Rate Variability (HRV) signals collected from the MAX30102 sensor on a Raspberry Pi.  
 It utilizes preprocessing, feature extraction, and deep learning (LSTM-based) classification pipelines based on the [`sleep-analysis`](https://github.com/mad-lab-fau/sleep_analysis) framework.
