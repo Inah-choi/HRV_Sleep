@@ -111,18 +111,24 @@ Each cycle performs:
 ✅ Predicts and prints the sleep stage
 
 ---
-
 ## 📁 Project Structure
 
 ```
 Smart_Blind_HRV_module/
-├── sleep-analysis/               # Core library: preprocessing, feature extraction, classification
-├── hrv_input/                    # Sensor input: MAX30102 reader
-│   └── max30102_reader.py
-├── models/                       # Pre-trained model (e.g., LSTM)
+├── DFRobot_BloodOxygen_S/         # ✅ MAX30102 공식 Python 드라이버 (GitHub에서 clone)
+│   └── python/
+│       └── DFRobot_BloodOxygen_S.py
+│
+├── hrv_input/                     # HRV 수집 모듈
+│   └── max30102_reader.py         # MAX30102에서 HR 데이터 수집 (SpO2 제외)
+│
+├── models/                        # 사전 학습된 수면 분류 모델
 │   └── lstm_model.h5
-├── run_real_time_pipeline.py     # Main runtime script
-├── pyproject.toml / poetry.lock  # Python dependency management
-└── README.md
-```
-```
+│
+├── sleep-analysis/               # 수면 분석 프레임워크 (전처리/분류/특징 추출 등)
+│   └── ...
+│
+├── run_real_time_pipeline.py     # 메인 실행 스크립트 (버튼 누르면 반복 측정 및 추론)
+├── pyproject.toml                # Poetry 기반 Python 의존성 설정
+├── poetry.lock                   # 고정된 의존성 버전 정보
+└── README.md                     # 📝 프로젝트 설명서
